@@ -1,0 +1,12 @@
+<div class="overlay" *ngIf="menuState === 'in'" (click)="menuState = 'out'"></div>
+<div [@routerTransition]="getState(o)">
+  <app-navbar (navToggled)="toggleMenu()"></app-navbar>
+  <div class="container-fluid">
+    <div class="row">
+      <app-sidebar [@slideDrawerLeft]="menuState"></app-sidebar>
+      <div class="container-fluid">
+        <router-outlet #o="outlet"></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

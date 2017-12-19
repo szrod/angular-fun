@@ -1,0 +1,32 @@
+<div class="example-container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Status</th>
+      <th scope="col">Name</th>
+      <th scope="col">Patient ID</th>
+      <th scope="col">Date of Birth</th>
+      <th scope="col">Service ID</th>
+      <th scope="col">Service</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let case of cases">
+      <th scope="row">
+        <i class="fa fa-2x" [ngClass]="{
+      'fa-circle': case.statusKey === 'InProgress',
+      'fa-check-circle': case.statusKey === 'Completed',
+      'fa-minus-circle': case.statusKey === 'ActionNeeded'
+      }" aria-hidden="true"></i>
+      </th>
+      <td>{{ case.name }}</td>
+      <td>{{ case.patientID}}</td>
+      <td>{{ case.dob }}</td>
+      <td>{{ case.serviceID }}</td>
+      <td>
+        <span class="badge badge-dark {{case.service}}">{{ case.service }}</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

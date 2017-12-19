@@ -1,0 +1,13 @@
+<h3>Cases</h3>
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel title="Completed Cases over the past 7 days">
+    <ng-template ngbPanelContent>
+      <app-completed-cases></app-completed-cases>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Current Cases">
+    <ng-template ngbPanelContent>
+      <app-current-cases></app-current-cases>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

@@ -1,0 +1,72 @@
+@import "../../../../styles/palette";
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked)
+{
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:checked + label,
+[type="checkbox"]:not(:checked) + label
+{
+  position: relative;
+  padding-left: 3em;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+[type="checkbox"]:checked + label:before,
+[type="checkbox"]:not(:checked) + label:before
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+[type="checkbox"]:checked + label:after,
+[type="checkbox"]:not(:checked) + label:after
+{
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: $darkPurple;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: all 0.2s ease;
+}
+[type="checkbox"]:not(:checked) + label:after
+{
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after
+{
+  opacity: 1;
+  transform: scale(1);
+}
+[type="checkbox"]:disabled:checked + label:before,
+[type="checkbox"]:disabled:not(:checked) + label:before
+{
+  border-color: #ccc;
+  background-color: #eee;
+}
+[type="checkbox"]:disabled:checked + label:after
+{
+  background: #aaa;
+}
+
+/**
+ Override Material
+ */
+
+[type="checkbox"]:checked+label:before {
+  transform: none;
+  backface-visibility: hidden;
+  transform-origin: 100% 100%;
+}

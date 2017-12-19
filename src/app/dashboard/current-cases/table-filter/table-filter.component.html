@@ -1,0 +1,29 @@
+<div class="filter-container">
+  <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel class="example-headers-align" disabled="true">
+    <ng-template ngbPanelTitle>
+        <div class="container filter-top">
+          <span class="main">Filter Options</span>
+          <div class="row">
+            <div class="col s6 right-align">
+            </div>
+          </div>
+        </div>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel *ngFor="let filter of filters" [disabled]="filter.disabled">
+    <ng-template class="header" ngbPanelTitle>
+        <i class="material-icons amber-text darken-2" *ngIf="filter.disabled">star</i> {{ filter.title }}
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <ul class="collection">
+        <p *ngFor="let element of filter.elements" class="filter-holder">
+          <input type="checkbox" [checked]="element.active" [class.active]="element.active" (click)="toggleFilter(element)" id="{{ element.title }}">
+          <label for="{{ element.title }}">{{ element.title }}</label>
+        </p>
+        <!--<li class="collection-item" *ngFor="let element of filter.elements" [class.active]="element.active" (click)="toggleFilter(element)">{{ element.title }}</li>-->
+      </ul>
+    </ng-template>
+  </ngb-panel>
+  </ngb-accordion>
+</div>

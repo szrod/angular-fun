@@ -1,0 +1,20 @@
+.item {
+  border: 1px solid;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-right: 1em;
+  padding-left: 1em;
+  height: 7em;
+  text-align: center;
+  font-size: 15px;
+}
+
+.item.title {
+  background-color: purple;
+  color: white;
+}
+
+.item.value {
+  background-color: lighten(purple, 50%);
+  color: white;
+}

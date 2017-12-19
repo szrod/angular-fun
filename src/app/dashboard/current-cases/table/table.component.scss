@@ -1,0 +1,63 @@
+$red: #ff3547;
+$blue: #4285F4;
+$info: #82B1FF;
+$indigo: #3f51b5;
+$default: #2BBBAD;
+$pink: #ec407a;
+
+$lightPurple: #a6c;
+$purple: #8e24aa;
+$darkPurple: #880e4f;
+$deepPurple: #512da8;
+$brown: #795548;
+
+$darkGreen: #388E3C;
+$green: #00C851;
+$lightGreen: #8bc34a;
+
+$teal: #33b5e5;
+$cyan: #00bcd4;
+$orange: #F80;
+$deepOrange: #ff7043;
+$yellow: #fbc02d;
+$amber: #ffa000;
+
+$blueGrey: #78909c;
+$black: #3b3b3b;
+$lightBlack: #45526E;
+
+i {
+  &.fa-circle {
+    color: blue;
+  }
+  &.fa-check-circle {
+    color: green;
+  }
+  &.fa-minus-circle {
+    color: red;
+  }
+}
+
+span {
+  &.badge.badge-dark {
+    min-width: 6em;
+    min-height: 2em;
+    line-height: 2em;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    &.BV {
+      background: linear-gradient($lightGreen,$green);
+    }
+    &.PA {
+      background: linear-gradient(40deg,$yellow,$amber);
+    }
+    &.CoPay {
+      background: linear-gradient(40deg,$purple,$deepPurple);
+    }
+    &.PAP {
+      background: linear-gradient(40deg,$info,$blue);
+    }
+    &.PR {
+      background: linear-gradient(40deg,$blueGrey,$indigo);
+    }
+  }
+}

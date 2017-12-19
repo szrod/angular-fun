@@ -1,0 +1,56 @@
+mat-expansion-panel {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.filter-container {
+  min-height: 25px;
+  background-color: rgb(231,231,231);
+}
+
+.main {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align {
+  height: 6em;
+}
+
+/*
+ Overrides
+ */
+.mat-expansion-panel-spacing {
+  /* margin: 16px 0; */
+  margin: 0px;
+}
+
+.mat-expansion-panel-body {
+  padding: 0 0px 16px;
+}
+
+.filter-holder {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.filter-top {
+  margin-top: 2em;
+}
+
+.clear-btn {
+  font-size: 12px;
+  padding: 0;
+}
+

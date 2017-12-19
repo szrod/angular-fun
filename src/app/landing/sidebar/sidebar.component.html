@@ -1,0 +1,7 @@
+<ul class="list">
+  <li class="item" data-id="1" (click)="homeOpen = !homeOpen" [class.active]="homeOpen"><i class="fa fa-cog"></i> App
+    <div class="sub-list" data-id="1" [@slideInOut]="homeOpen">
+      <li class="sub-item" [routerLink]="'/'">Home</li>
+      <li class="sub-item" [routerLink]="'/dashboard'">Dashboard</li>
+    </div>
+</ul>
